@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E083D4372BEDAC9E001E611B /* Vects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D4352BEDAC9E001E611B /* Vects.cpp */; };
+		E083D43A2BEDACA7001E611B /* Geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D4382BEDACA7001E611B /* Geometry.cpp */; };
+		E083D43D2BEDACB1001E611B /* CoordinateSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D43B2BEDACB1001E611B /* CoordinateSystem.cpp */; };
+		E083D4432BEDACC4001E611B /* InputControls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D4412BEDACC4001E611B /* InputControls.cpp */; };
+		E083D4462BEDACCB001E611B /* NavigationalComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D4442BEDACCB001E611B /* NavigationalComponents.cpp */; };
+		E083D44C2BEDAD8C001E611B /* SequenceContainers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D44A2BEDAD8C001E611B /* SequenceContainers.cpp */; };
+		E083D4552BEDADF5001E611B /* SimulationEntities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D4532BEDADF5001E611B /* SimulationEntities.cpp */; };
+		E083D45B2BEDAE06001E611B /* Quadtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D4592BEDAE06001E611B /* Quadtree.cpp */; };
+		E083D4612BEDAE19001E611B /* SimulationConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D45F2BEDAE19001E611B /* SimulationConfig.cpp */; };
+		E083D46B2BEDC09B001E611B /* SimulationEnviroment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D4692BEDC09B001E611B /* SimulationEnviroment.cpp */; };
+		E083D46E2BF28953001E611B /* NBodySimulators.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D46C2BF28953001E611B /* NBodySimulators.cpp */; };
+		E083D4712BF28A76001E611B /* UserInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E083D46F2BF28A76001E611B /* UserInterface.cpp */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4A5B60F29BAAAE400C2D356 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		191CD6FA2847E21E0085CBB6 /* of.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = of.entitlements; sourceTree = "<group>"; };
+		191EF70929D778A400F35F26 /* openFrameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = openFrameworks; path = ../../../libs/openFrameworks; sourceTree = SOURCE_ROOT; };
+		E083D4352BEDAC9E001E611B /* Vects.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vects.cpp; sourceTree = "<group>"; };
+		E083D4362BEDAC9E001E611B /* Vects.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vects.hpp; sourceTree = "<group>"; };
+		E083D4382BEDACA7001E611B /* Geometry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Geometry.cpp; sourceTree = "<group>"; };
+		E083D4392BEDACA7001E611B /* Geometry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Geometry.hpp; sourceTree = "<group>"; };
+		E083D43B2BEDACB1001E611B /* CoordinateSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CoordinateSystem.cpp; sourceTree = "<group>"; };
+		E083D43C2BEDACB1001E611B /* CoordinateSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CoordinateSystem.hpp; sourceTree = "<group>"; };
+		E083D43F2BEDACBA001E611B /* StatisticalMethods.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StatisticalMethods.hpp; sourceTree = "<group>"; };
+		E083D4412BEDACC4001E611B /* InputControls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputControls.cpp; sourceTree = "<group>"; };
+		E083D4422BEDACC4001E611B /* InputControls.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputControls.hpp; sourceTree = "<group>"; };
+		E083D4442BEDACCB001E611B /* NavigationalComponents.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NavigationalComponents.cpp; sourceTree = "<group>"; };
+		E083D4452BEDACCB001E611B /* NavigationalComponents.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NavigationalComponents.hpp; sourceTree = "<group>"; };
+		E083D44A2BEDAD8C001E611B /* SequenceContainers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SequenceContainers.cpp; sourceTree = "<group>"; };
+		E083D44B2BEDAD8C001E611B /* SequenceContainers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SequenceContainers.hpp; sourceTree = "<group>"; };
+		E083D44E2BEDAD97001E611B /* ObjectPool.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ObjectPool.hpp; sourceTree = "<group>"; };
+		E083D4512BEDADA3001E611B /* DrawingUtilities.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DrawingUtilities.hpp; sourceTree = "<group>"; };
+		E083D4532BEDADF5001E611B /* SimulationEntities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SimulationEntities.cpp; sourceTree = "<group>"; };
+		E083D4542BEDADF5001E611B /* SimulationEntities.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SimulationEntities.hpp; sourceTree = "<group>"; };
+		E083D4572BEDADFF001E611B /* QuadrantUtils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuadrantUtils.hpp; sourceTree = "<group>"; };
+		E083D4592BEDAE06001E611B /* Quadtree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Quadtree.cpp; sourceTree = "<group>"; };
+		E083D45A2BEDAE06001E611B /* Quadtree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Quadtree.hpp; sourceTree = "<group>"; };
+		E083D45D2BEDAE11001E611B /* PhysicsLogic.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PhysicsLogic.hpp; sourceTree = "<group>"; };
+		E083D45F2BEDAE19001E611B /* SimulationConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SimulationConfig.cpp; sourceTree = "<group>"; };
+		E083D4602BEDAE19001E611B /* SimulationConfig.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SimulationConfig.hpp; sourceTree = "<group>"; };
+		E083D4632BEDB4F1001E611B /* VisualizationUtils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VisualizationUtils.hpp; sourceTree = "<group>"; };
+		E083D4692BEDC09B001E611B /* SimulationEnviroment.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SimulationEnviroment.cpp; sourceTree = "<group>"; };
+		E083D46A2BEDC09B001E611B /* SimulationEnviroment.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SimulationEnviroment.hpp; sourceTree = "<group>"; };
+		E083D46C2BF28953001E611B /* NBodySimulators.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NBodySimulators.cpp; sourceTree = "<group>"; };
+		E083D46D2BF28953001E611B /* NBodySimulators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NBodySimulators.hpp; sourceTree = "<group>"; };
+		E083D46F2BF28A76001E611B /* UserInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UserInterface.cpp; sourceTree = "<group>"; };
+		E083D4702BF28A76001E611B /* UserInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UserInterface.hpp; sourceTree = "<group>"; };
+		E4B69B5B0A3A1756003C02F2 /* Generic Quadtree Barnes-Hut  N-Body Simulator 0_1Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Generic Quadtree Barnes-Hut  N-Body Simulator 0_1Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = addons;
+			path = ../../../addons;
+			sourceTree = "<group>";
+		};
+		E083D42E2BEDAC2D001E611B /* Testing and Benchmarking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Testing and Benchmarking";
+			sourceTree = "<group>";
+		};
+		E083D42F2BEDAC3F001E611B /* N-Body Simulators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "N-Body Simulators";
+			sourceTree = "<group>";
+		};
+		E083D4302BEDAC53001E611B /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				E083D4632BEDB4F1001E611B /* VisualizationUtils.hpp */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		E083D4312BEDAC5A001E611B /* Core Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E083D4532BEDADF5001E611B /* SimulationEntities.cpp */,
+				E083D4542BEDADF5001E611B /* SimulationEntities.hpp */,
+				E083D4572BEDADFF001E611B /* QuadrantUtils.hpp */,
+				E083D4592BEDAE06001E611B /* Quadtree.cpp */,
+				E083D45A2BEDAE06001E611B /* Quadtree.hpp */,
+				E083D45D2BEDAE11001E611B /* PhysicsLogic.hpp */,
+				E083D4692BEDC09B001E611B /* SimulationEnviroment.cpp */,
+				E083D46A2BEDC09B001E611B /* SimulationEnviroment.hpp */,
+			);
+			path = "Core Logic";
+			sourceTree = "<group>";
+		};
+		E083D4322BEDAC62001E611B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E083D4332BEDAC7D001E611B /* Math Utilities */,
+				E083D4342BEDAC8B001E611B /* Interface Elements */,
+				E083D44A2BEDAD8C001E611B /* SequenceContainers.cpp */,
+				E083D44B2BEDAD8C001E611B /* SequenceContainers.hpp */,
+				E083D44E2BEDAD97001E611B /* ObjectPool.hpp */,
+				E083D4652BEDB539001E611B /* Rendering Utilities */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E083D4332BEDAC7D001E611B /* Math Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E083D4352BEDAC9E001E611B /* Vects.cpp */,
+				E083D4362BEDAC9E001E611B /* Vects.hpp */,
+				E083D4382BEDACA7001E611B /* Geometry.cpp */,
+				E083D4392BEDACA7001E611B /* Geometry.hpp */,
+				E083D43B2BEDACB1001E611B /* CoordinateSystem.cpp */,
+				E083D43C2BEDACB1001E611B /* CoordinateSystem.hpp */,
+				E083D43F2BEDACBA001E611B /* StatisticalMethods.hpp */,
+			);
+			path = "Math Utilities";
+			sourceTree = "<group>";
+		};
+		E083D4342BEDAC8B001E611B /* Interface Elements */ = {
+			isa = PBXGroup;
+			children = (
+				E083D4412BEDACC4001E611B /* InputControls.cpp */,
+				E083D4422BEDACC4001E611B /* InputControls.hpp */,
+				E083D4442BEDACCB001E611B /* NavigationalComponents.cpp */,
+				E083D4452BEDACCB001E611B /* NavigationalComponents.hpp */,
+			);
+			path = "Interface Elements";
+			sourceTree = "<group>";
+		};
+		E083D4652BEDB539001E611B /* Rendering Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E083D4512BEDADA3001E611B /* DrawingUtilities.hpp */,
+			);
+			path = "Rendering Utilities";
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E083D4322BEDAC62001E611B /* Utilities */,
+				E083D4312BEDAC5A001E611B /* Core Logic */,
+				E083D4302BEDAC53001E611B /* Rendering */,
+				E083D42F2BEDAC3F001E611B /* N-Body Simulators */,
+				E083D42E2BEDAC2D001E611B /* Testing and Benchmarking */,
+				191CD6FA2847E21E0085CBB6 /* of.entitlements */,
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				191EF70929D778A400F35F26 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				E4B69B5B0A3A1756003C02F2 /* Generic Quadtree Barnes-Hut  N-Body Simulator 0_1Debug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				E083D46C2BF28953001E611B /* NBodySimulators.cpp */,
+				E083D46D2BF28953001E611B /* NBodySimulators.hpp */,
+				E083D45F2BEDAE19001E611B /* SimulationConfig.cpp */,
+				E083D4602BEDAE19001E611B /* SimulationConfig.hpp */,
+				E083D46F2BF28A76001E611B /* UserInterface.cpp */,
+				E083D4702BF28A76001E611B /* UserInterface.hpp */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* Generic Quadtree Barnes-Hut  N-Body Simulator 0_1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "Generic Quadtree Barnes-Hut  N-Body Simulator 0_1" */;
+			buildPhases = (
+				E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */,
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+				E4A5B60F29BAAAE400C2D356 /* CopyFiles */,
+				19B789C429E5AB4A0082E9B8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Generic Quadtree Barnes-Hut  N-Body Simulator 0_1";
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* Generic Quadtree Barnes-Hut  N-Body Simulator 0_1Debug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "Generic Quadtree Barnes-Hut  N-Body Simulator 0_1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* Generic Quadtree Barnes-Hut  N-Body Simulator 0_1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19B789C429E5AB4A0082E9B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script — Compile OF";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"💾 Compiling Openframeworks\"\nxcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"  CLANG_CXX_LANGUAGE_STANDARD=$CLANG_CXX_LANGUAGE_STANDARD MACOSX_DEPLOYMENT_TARGET=$MACOSX_DEPLOYMENT_TARGET GCC_PREPROCESSOR_DEFINITIONS=$USER_PREPROCESSOR_DEFINITIONS\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E083D4612BEDAE19001E611B /* SimulationConfig.cpp in Sources */,
+				E083D4712BF28A76001E611B /* UserInterface.cpp in Sources */,
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E083D43D2BEDACB1001E611B /* CoordinateSystem.cpp in Sources */,
+				E083D46E2BF28953001E611B /* NBodySimulators.cpp in Sources */,
+				E083D43A2BEDACA7001E611B /* Geometry.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				E083D44C2BEDAD8C001E611B /* SequenceContainers.cpp in Sources */,
+				E083D4372BEDAC9E001E611B /* Vects.cpp in Sources */,
+				E083D4462BEDACCB001E611B /* NavigationalComponents.cpp in Sources */,
+				E083D45B2BEDAE06001E611B /* Quadtree.cpp in Sources */,
+				E083D4552BEDADF5001E611B /* SimulationEntities.cpp in Sources */,
+				E083D46B2BEDC09B001E611B /* SimulationEnviroment.cpp in Sources */,
+				E083D4432BEDACC4001E611B /* InputControls.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
+				COPY_PHASE_STRIP = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_UNROLL_LOOPS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)",
+				);
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+				);
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "Generic Quadtree Barnes-Hut  N-Body Simulator 0_1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "Generic Quadtree Barnes-Hut  N-Body Simulator 0_1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
