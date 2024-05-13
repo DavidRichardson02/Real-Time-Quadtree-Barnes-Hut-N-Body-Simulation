@@ -4,6 +4,17 @@ Part 1 of a undergraduate directed study on the variations of the Barnes-Hut alg
 
 
 
+Latest Updates:
+      -Preparing program for large scale refactoring of structure of logic flow and implementation. To give it as an analogy, the recipe(data structure foundational logic), the ingredients(simulation entities logic), and the oven(force calculation w/approximation
+      methods) are all ready to go, but the garnishing is horrific(UI is a mess).  
+      - The plan-> go from 'get a working model' mindset   ==>   'this shit better be spotless' which is done to hopefully prevent stuff like unnesscary confusion and just necessary if it 's ever going to be used as an educational resource.
+
+
+
+
+
+
+
 General Information: This collection of code constitutes a specific implementation of the Barnes-Hut approximation algorithm for gravitational N-body simulations, utilizing a generic pointer-based quadtree. This version represents one variant among several explored in a broader directed study focused on the different implementations of the Barnes-Hut algortihmic technique for approximating force calculations.
 
 Context for Current State of Program: The logic of the simulation has been completed for a long time, but because this was my first big coding project in general, my UI and visualization code was pretty ugly and not at all generalized, so I decided to completely refactor it in the hope to make it not only readable and streamlined, but also designed so that it might find use in applications unrelated to this project. Anyway, the old user-interface was completely functional despite the bad coding practices it was made in, and included a bunch of cool features that still function in the current version of the project, but are no longer accessible because the current user-interface has not yet fully integrated all of these capabilities, and while it would not take very long to add the code for all these functionalities(much quicker than typing out this readme), I'm focused on redesigning the way the UI interacts with the simulation at large, with my end goal centered around achieving a modularized implementation of the UI elements in a hierarchical structure of element management such that a single instantation of a 'TableManager' object will be responsible for all UI in the simulation and will require no additional assistance after it has been initialized with the UI elements.
