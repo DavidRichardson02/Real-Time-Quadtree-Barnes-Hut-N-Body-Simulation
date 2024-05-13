@@ -7,7 +7,7 @@ Part 1 of a undergraduate directed study on the variations of the Barnes-Hut alg
 Latest Updates:
       -Preparing program for large scale refactoring of structure of logic flow and implementation. To give it as an analogy, the recipe(data structure foundational logic), the ingredients(simulation entities logic), and the oven(force calculation w/approximation
       methods) are all ready to go, but the garnishing is horrific(UI is a mess).  
-      - The plan-> go from 'get a working model' mindset   ==>   'this shit better be spotless' which is done to hopefully prevent stuff like unnesscary confusion and just necessary if it 's ever going to be used as an educational resource.
+      - The plan-> go from 'get a working model' mindset   ==>   'clean the code and documentation' which is done to hopefully minimize confusion and just seems necessary if it 's ever going to be used as an educational resource.
 
 
 
