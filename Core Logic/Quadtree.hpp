@@ -85,24 +85,9 @@
  *
  *
  *
-		/// ------------ Bored, meaningless, pretentious rant ------------
- * the only nuance going on here happens when my audacious stupidity fails to be account for the difference between my model made with a basis in things previously assumed to be
- * true now known to be false in the pursuit of achieving a description that is able to fully elaborate on a subject's nuances of interest, where the difference between a
- * completely satisfactory understanding and a seemingly satisfactory understanding are not beholden to any sort of assumed conventions, but rather that the assumed conventions
- * are designed and directed as partial truths of a whole model mapping the subject in question from observation to our brain, where all the shit(science in general tbh, for me
- * so far at least) we do is just to help in the mapping process, while the difference between our models and what we believe them to be based on are seemingly seperated by an
- * unknowable chasm between them... basically I got into Barnes-Hut simulations cause I wanted to make a sick first coding project and this was convenient cause I was also
- * hoping to relate my passion for physics/math to foster a passion for computer shit, so what I did was get in way over my head, get super lost in a rabbit hole of
- * specialized papers, tutorials, and textbooks(they are at least relevant to my degree tho, somewhat), spent a few months navigating my labyrinthine experience with N-Body
- * Simulations w/approximation methods, and basically got obsessed with N-Body simulations for a number of months, to the point that I went from learning how to check for
- * intersections between 2D circles in openframeworks and finding out what a for loop is while learning C for the first time to completing my third implementation of a simulation
- * model using the methodologies derived from the original 1986 work by Josh Barnes and Piet Hut, and the most complex one I've done to date
- *
- *
  *
 	/// ------------ Bored, partially useful rant ------------
  *	(wouldn't have been conceivable without Proffesor Alexander Brandt, with whom I have no affiliation, and his paper "On Distributed Gravitational N-Body Simulations"),
- *
  * which was my real-time implementation of the Parallel Barnes-Hut Simulation(Hashed Octree in Parallel Construction with Z-Order Morton Encoding over a period of around 5
  * months, which might sound impressive if you don't know the details, but my underestimation of what I was getting myself into when starting this whole thing was to the
  * extent that the Hashed-Octree, a highly specialized data structure(for me) and mostly obscure to my field of study(but just in the sense that I'm not gonna be doing N-Body
@@ -114,58 +99,9 @@
  * being the correct simulation approximation method is just defined as the one our current models can most thoroughly account for with regards to the evolution of the chaotic
  * dynamical system(i.e., the N-body -> N^2 interactions part... more bodies->more terms exponentially in a diffyQ thing->more unpredictable->whole buncha new shit like chaos
  * theory and dynamical systems came about after Sir Isaac Newton discovered the phenomenon, hence the lack any general analytical solutions, and one piece of the great incentive for simulation)
+
  *
- *
- *
-	/// ------------ Bored, embellishing, not useful except for me notes later rant ------------
- * but still acceptable understanding of the working models and theories this study has been chiefly concerned with, as accumulated over long periods of time by
- * reading the works of people who know much more about the subject than I do. The obstacle I ran into over and over and over again as a result of my ingenious strategy
- * to keep hitting the same wall with my head til I either forgot what the problem was, some random thing suddenly made sense after reading about it a bunch of times,
- * a stockoverflow hero, or one of my guesses ended up panning out, in any case, the only way I had a shot in at least somewhat successfully navigating this experience was to not
- * cross anything off the list of things I'm considering until I'm reasonably certain that the thing in question is not viable for the context, so over a lot of time browsing
- * articles and research papers about whatever related topic I was spending the day with my head in, a lot of fruitless and mostly baseless speculations was able to take hold,
- * very slowly at first, but as I read and learned and picked up little pieces of the puzzle, I started to build a base to make further speculations from, again and again,
- * considering the options and their implications and how those things relate to the context, and how I can put these things together to eventually end up with something
- * commendable, I have now found myself in a unique position, characterized by my recent confusing experience, and eventually, when I sat down to read some stuff about
- * obscure(to my experience) and potentially related concepts, instead of feeling dazed and confused while throwing darts at my keyboard in visualstudio(I'm embellishing cause
- * bored), I came across something that my accumulated info on Barnes–Hut simulations in general had me actually understanding what I read, understanding how it relates to my
- * program, and understanding how to change my program to reflect this new stuff. And while I did at least had the bare minimum prerequisites going in that were/are necessary for
- * understanding the idea of the model and the general concept of the approach, from a bunch of math and physics classes(I was sophemore computer engineering undergrad at start of
- * this thing), I lacked any solid intuition for understanding how to give instructions to the computer with nuance, so the months of time I spent browsing
- * mysterious papers was like me running around to a bunch of shops to see who has what I want, running around all over the place and annoying shopkeepers when I dont't know
- * what I want, but what I also did was go back to my stall, drop off what I found, why I thought it could be useful, and generally just document and update my stock as I
- * was able to interact with the works of people who spent years working out the real science of the methods and coming up with new and novel ways to perform simulations and who
- * also lay out the groundwork making any of this possible. Ergo, they were/are providing detailed accounts of their works, ergo, these super science dudes are way too smart to be
- * digestible for general audiences(in undergrad stem, or anyone interested with some relevant background I think) in a reasonable format, ergo, bonehead Dave is down the rabbit hole,
- * ergo, bonehead => Spatial Decomposition bonehead(also I haven't slept in a while so I'm in that weird sleep
- * deprived wired mindset & can't stop thinking cause atp my circadian rhythm is just boolin and whatever comes to mind is gettin typed with very little filter)
- *
- *
-	/// ------------ Bored, not TLDR, pretentious(not on purpose mostly), definitely procrastination, useless  rant ------------
- * TLDR: Most people who know about how to actually do N-Body simulations are either weirdos with too much time on their hands or highly specialized experts with years of dedicated
- * experience, meaning there are no incentives for this relatively small group of people to make stuff for people being introduced to the subject matter for the first few times(can't be helped, the stuff those guys are doing is so specialized and so complex/sophisticated that the field necessitates a whole bunch of jargon to describe the full picture, which is actually undeniably a very good thing even if it makes it more difficult for , y'know, like how much less physics would Newton have discovered/pioneered if he had been concerned with making sure everybody could follow along, probably not much less, cause he was friends with guys like Leigniz anyways, but thats the point, if the researchers have to do their stuff then they shouldn't be burdened with developing models that cater any more to the human brain's capacity for misunderstanding than necessary, otherwise it defeats the whole point of developing models based on how they meet metrics dictated by us to determine usefulness, these are random notes I'll probably use when making the videos for this stuff, is anybody actually reading this, if you're reading this get dimmadome dog walked + you eat corn the long way(05/13/24 @11:36am), anyways I wanna take this opportunity to remind myself to talk about one of my favorite mathmeticians of recent history, George Box, who might be most well known for his coining of the phrase "All models are wrong, but some are useful.", which I believe to be one of the things I can treat as though it is known to be true with the most amount of certainty(noteable exceptions like 2nd law thermodynamics or anything else beyond like electromagnetism, diffEq's, or a little bit on the dimensionless constants, also like all the other stuff I'm not even qualified to mention, so this is like a meaningless thing for me to say, exceot how it's useful for me to type long rants on stuff that isn't really productive but is still more entertaining than actual work thinking), all the same, my general sentiment is that there are no correct models, and the useful ones only exist to the extents with which we are able to define observations relative to our experience with them(when it comes to understanding things independently of their relations I think it seems difficult to consider, unless it's somehow rectified, or our ineptitude explained, by the unassailable and absolute seperation that seems to lie in the path of our models accounting of the universe, the only reason apparent reason known to me from which our incentives to develop models were/are stimulated by is how they are useful to us, imagine, if there really is a model that can fully describe the universe, would you really expect it to have anything to do with a system that can only find use in models made for uses as we dictate them, does it even make sense in the first place to ask the question why?
- * does the field of statistics develop models that predict the evolution of systems because the evolution of systems develops with a rich historical precedence, which is used by our minds to develop models mapping these events to ones we expect to proceed them based on what has come before, how, and the enviroment/conditions when they did, that must always be by-and-large designed on a case-by-case basis, or do they hint at a path to a more absolute truth, or perhaps a better description of such events. Don't we seem to assume that the world around us is obligated to act how our models tell us to, isn't it just that by cross-referencing these models and checking them for failure in every way we can think of will never deliver us to a satisfactory answer with regards to , but rather only stimulate our growth towards understanding how exactly we are a product of our enviroment, as these models are adjusted(versatile models specialized for some purpose like what famously happened to Einstein's equations with diverse and myriad discoveries that followed by exploring many specific cases for the equations to examine, making great progress but also uncovering mysteries we might have otherwise never imagined, although not necessarily wrong) <-- I'm talking specifically the singularity black hole thing, I would never diss Einstein in any way the #2 goat of science in human history> to find use in whatever purpose their modeler had in mind, one that the original modeler, and model, might not have inconceivably failed to account for.
- * On an actual serious note though, all of this weird talk is like 90% baseless speculation, and regardless of whether every word of it is right or not one, it still really doesn't move the goal posts a whole lot, and there's a whole bunch of unbelievable science out there that I've had the privilige of interacting with to the point it seems very clear to me that there's a whole lotta stuff we'll almost certainly never have the chance to explore, but as the species grows over time(talkin bout technology stuff), we'll probably find some pretty crazy stuff, and that some of our stuff is pretty crazy, but only the people who stick around to push that stuff forward will get to experience what that's like, assuming we don't blow each other up or somthing, so seeing as how I basically spent a while gathering up all the stuff you would need to build a simulation, I might as well put it all together in a compendium as some sort of digestible and comprehensive format to spread this stuff to more people who can experience it.
- *
- *
- *
- *
- *
- * Basically my overarching goal with this directed study is to take the stuff I know, branch it to the real information+jargon dense research/texts, and then branch that version
- * to the stuff most people with a solid math/physics model can explore in a comprehensive format guiding users from the lots of really simple shit and how that builds up to the
- * rigorous cool shit, cause the hard stuff is actually just lots of easy stuff stacked up, and when it comes to N-Body simulations w/approximation algortihms I have an advantage
- * over the experts when it comes to teaching, see because their experts they know(or knew) more basic stuff like this for probably long enough to forget all the stupid
- * misconceptions they might ran into or seen coming and avoided, so it's easier for me to see where the pitfalls are, the flip side of this is that their expert perspective
- * and model has to view the smaller building block stuff as rigid and assumed as knowns, otherwise they wouldn't be able to do the crazy shit that pushes fields forward,
- * cause it's just that rigorous the situation demands that sort of thing, like imagine if every time you did algebra you had to check a ~250 long dissertation that sets up
- * and proves the math for 1+1=2(plz don't get mad at this lackluster analogy if your a mathmetician, I hope it pissed you off if your a paleontologist, what are you even
- * doing here?), any system has to rely on assumed knowns like these, and that really has literally nothing to do with what I started typing this out for, but atp idk bruh
- * whatever, maybe like one dude is gonna read this if I get unlucky.
- *
- *
- *
- *
-		/// ------------ THE REAL TLDR ------------
+		/// ------------ TLDR ------------
  *
  *		Summary: 
  *			- N-Body simulations usually only accessible through a diligent accumulation of years of study,
