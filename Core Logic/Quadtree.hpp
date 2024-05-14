@@ -26,14 +26,7 @@
  *
  * dev NOTE: Remember that this set of header and source files(QuadrantUtils.hpp, QuadrantUtils.cpp, Quadtree.hpp, Quadtree.cpp), 
  *			 only exist to define the data structure that is the quadtree which this simulation will use to partition space
- *			 for implementing the Barnes-Hut algorithm for approximating force calculations, i.e., if I were to express this sentiment using an analogy
- *			 to relate this to an artisan doing something like constructing a house,
- *			 these files would be like the top of a terrific hill, a classic idyllic location, where the house is being planned to be built,
- *			 meaning the primary concern of the artisan lies with ensuring a reliable foundation to build the house on top of...
- *			 in this context, something like loose sand that could lead to a future landslide(or other less dramatic, and less noticeable, issues)
- *			 could be likened to something like loose pointers in the hierarchy of nodes and assoiciated elements kicking off a spectacular cascading crescendo of failure
- *			 and pointer shenanigans.
- *
+ *			 for implementing the Barnes-Hut algorithm for approximating force calculations.
  *
  * 			/// ------------ Ambiguous but potentially insightful analogy
  *				If the simulation is likened to a process where we plant a tree, water it, and guide it's development, which culminates with a harvest of apples,
@@ -144,9 +137,7 @@
  * was able to interact with the works of people who spent years working out the real science of the methods and coming up with new and novel ways to perform simulations and who
  * also lay out the groundwork making any of this possible. Ergo, they were/are providing detailed accounts of their works, ergo, these super science dudes are way too smart to be
  * digestible for general audiences(in undergrad stem, or anyone interested with some relevant background I think) in a reasonable format, ergo, bonehead Dave is down the rabbit hole,
- * ergo, bonehead => Spatial Decomposition bonehead, i.e., had a big mouth and too
- * late to backout, only thing to do is follow through or fail, so I failed to meaningfully make progress, did that frequently for a while, til I did it less, now not so often, now
- * I'm in the follow through phase for the most part(got a solid basis to make and implement plans from for the study, also I haven't slept in a while so I'm in that weird sleep
+ * ergo, bonehead => Spatial Decomposition bonehead(also I haven't slept in a while so I'm in that weird sleep
  * deprived wired mindset & can't stop thinking cause atp my circadian rhythm is just boolin and whatever comes to mind is gettin typed with very little filter)
  *
  *
