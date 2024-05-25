@@ -8,7 +8,7 @@
  
  
 		THE BARNES-HUT METHOD FOR FORCE APPROXIMATIONS WILL ONLY REDUCE THE COMPUTATIONAL BURDEN OF RUNNING THE REAL-TIME
-		N-BODY GRAVITATIONAL SIMULATION TO THE EXTENTS THAT THE QUADTREE DATA STRUCTURE IS ABLE TO ACCOMODATE IT.
+		N-BODY GRAVITATIONAL SIMULATION TO THE EXTENTS THAT THE QUADTREE DATA STRUCTURE IS ABLE TO ACCOMODATE THE APPROXIMATION METHODS.
  */
 
 
@@ -22,13 +22,61 @@
  * This helps in approximating the gravitational force calculations between the N-bodies,
  * effectively reducing computational complexity from O(N^2) to O(NlogN).
  *
+ * The Barnes-Hut force approximation algorithm is essentially a recursive spatial-partitioning strategy
+ * for grouping entities together and minimizing the number of direct entity-entity interactions, typically done 
+ * by generating a single entity representative of a group of entities, then when the calculations are being 
+ * done, the direct algorithm will compute each entity's interactions with every other entity, where the evolution of a given 
+ * entity proceeds as directed by the cumulative affect of interactions it has with all other entities.
+ *
+ * Hence, while it is absolutely unavoidable that the evolution of a given entity is entirely dictated by the interactions 
+ * it has with every other entity, and that the complete mathematical description of the state(motion) of an entity necessitates 
+ * computing direct entity-entity interactions for all, there is no restriction for how the interactions are to be represented in the 
+ * computing process. Meaning, if a group of entities can be treated as a single entity representative of the whole group, then 
+ * this representative entity can stand in for the group and minimize the amount of direct entity-entity interactions, 
+ * where the only consequence for approximating the entity-group as a single representative one is the loss in accuracy from using the 
+ * approximation. 
  *
  *
- * dev NOTE: Remember that this set of header and source files(QuadrantUtils.hpp, QuadrantUtils.cpp, Quadtree.hpp, Quadtree.cpp), 
- *			 only exist to define the data structure that is the quadtree which this simulation will use to partition space
- *			 for implementing the Barnes-Hut algorithm for approximating force calculations.
  *
- * 			/// ------------ Ambiguous but potentially insightful analogy
+ *
+ * The first step in the process of generating the quadtree is to generate global bounds for the quadtree
+ * that will effectively define the area within the simulation space that the quadtree will be assigned, and
+ * which must enclose all of the bodies in the simulation. 
+ * 
+ * The global bounds of the quadtree will accomodate all spatial subdivisions and must 
+ * contain all of the n-bodies for the duration of the simulation, furthermore, the 
+ * global bounds are implemented as the bounds of the root-node, meaning that at each
+ * step of the simulation the entire tree will be built using these global bounds.
+ * Then the process for implementing the recursive spatial-partitioning strategy 
+ * can be split into three distinct phases: 
+ * 			- preparation phase, initialize quadtree and prepare for bodies to be inserted
+ * 			- insertion phase, pass each body into the tree and assign an enclosing node to it, subdividing as necessary to enclose  
+ * 			- force calculation phase.
+ * 
+ * The preparation phase is responsible for ensuring the quadtree is able to accomodate the 
+ * spatial-parititioning strategy(implemented in phase two), i.e., determining the bounds of
+ * the space to be partitioned and initializing the quadtree with this space as the rootnode's bounds
+ * such that all of the n-bodies are enclosed within, meaning, phase two can begin as soon as
+ * the quadtree is ready to partition the space into quadrants bodies to be inserted into it.
+ *
+ *
+ 	STILL WORKIN ON DOCUMENTATION... WILL PICK BACK UP WITH ELABORATING ON THE THREE PHASES NEXT TIME...
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * dev NOTE: Remember that this set of header and source files(QuadrantUtils.hpp, QuadrantUtils.cpp, Quadtree.hpp, Quadtree.cpp)
+ *			 are responsible for defining the quadtree such that it is able to accomodate the recursive spatial-partitioning strategy
+ *			 used in the Barnes-Hut algortihm, where the basic strategy for partitioning the simulation space is 
+ *			 to generate nodes(quadrants) based on the passed in body data, recursively subdividing parent nodes into quadrants 
+ *			 until each subdivision contains 0 or 1 bodies.
+ *
+ 
+ * 			/// ------------ Maybe useful analogy
  *				If the simulation is likened to a process where we plant a tree, water it, and guide it's development, which culminates with a harvest of apples,
  *				then the files defining the quadtree data structure are where we come up with the coding for the appletree's DNA, which will dictate the development process...,
  *				|
@@ -53,20 +101,6 @@
  *
  *
  *
- *
- * 			/// ------------ Another ambiguous but potentially insightful analogy
- *			Expressed as an analogy, these files defining the quadtree data structure might be likened to being as to the
- *			files where the quadtree is built and the files where the force calculations are made
- *			as a complex recipe for a meal would be compared to the restaurant where the meal is cooked.
- *
- *			The careful recipe(quadtree data structure) and sophisticated ingredients(entities partitioned for... see quadtree note below) respectively serve as the
- *			blueprints dictating the preparation process of the meal and the foundation upon which the meal must stand in it's execution,
- *			both of which will be key in determining the quality of the meal, where the only acceptable result is achieved by the harmonious and nuanced direction(s) of the recipe
- *			being carried out using reliable ingredients as a foundation.
- *
- *			Here we outline our rigorous methodologies, later we cook. 
- *
- *
  */
 
 
@@ -75,31 +109,28 @@
 			/// ------------PS Section is just an excuse for me to rant while I'm procrastinating ------------
 /** PS:
  *
- * The only aspect the TLDR analogy falls flat on it's face and fails to account for, with regards to the: abstract, ambiguous, and arbitrairly conceptulized
- * relations drawn between the two, from actual simulation is that once we start the cooking process(run the simulation), it will be too late
- * to change the recipe, meaning our model has to be able to account for all reasonable variability... ideally at least, the computer is gonna do whatever the
- * hell the computer tells it to do, and at the level in the language command chain
- * (how it looks to me: existential crisis gibberish-->slightly less gibberish-->assembly-->C/C++-->bastard snake)
- * that we are submitting instructions from, it's basically just a bunch of educated guesses with priority placed on just minimizing silly shit by meticulously documenting
- * everything and getting the little shit right in order to hopefully avoid all the little pitfalls that my ignorance leaves me blind to(once you go below C that shit might as well be Latin for all the difference it would do me, besides this sort of thing is pretty much a non-issue for a project like this, whose scope will have no problem finding a complete description drawn within the confines of existing mathmetically well-defined computer limitations, and is unlikely to approach the fringe edge of any field except potentially one based in educational pursuits, which is more focused on teaching tools based on da code, not just da code, 
- *
- *
  *
  *
 	/// ------------ Bored, partially useful rant ------------
  *	(wouldn't have been conceivable without Proffesor Alexander Brandt, with whom I have no affiliation, and his paper "On Distributed Gravitational N-Body Simulations"),
- * which was my real-time implementation of the Parallel Barnes-Hut Simulation(Hashed Octree in Parallel Construction with Z-Order Morton Encoding over a period of around 5
- * months, which might sound impressive if you don't know the details, but my underestimation of what I was getting myself into when starting this whole thing was to the
- * extent that the Hashed-Octree, a highly specialized data structure(for me) and mostly obscure to my field of study(but just in the sense that I'm not gonna be doing N-Body
- * simulation for a living, as a learning experience it has been invaluable), was the SECOND data structure I ever thoroughly learned, the first being the pointer-based
- * quadtree(which I'm pretty sure I did wrong the first time, also remember this is still the generic pointer-based implementation of the Barnes-Hut algorithmic method for
- * approximating force calculations, and it's in 2D, and it's definitely the most straightforward of the methodologies, not a knock, it's still very complex, otherwise it wouldn't be worth making a whole thing about it, or maybe it's difficulty comes more from how it draws from many different and often unrelated fields, cause once you have all the pieces of the puzzle they fit together very nicely without much room for confusion, just better be sure to have all the pieces and that your trying to fit them into the right frame, which I found to be a tedious process) so basically what I'm trying to say is that I
- * spent a few months stubbornly scanning texts and picking up the stuff along the way I thought would help me put together this puzzle, and the result is that I
- * gained a limited(I'd say I know very thoroughly how the simulation works, while I think the why question in the nuances of the process will always be ongoing for me, reason
- * being the correct simulation approximation method is just defined as the one our current models can most thoroughly account for with regards to the evolution of the chaotic
- * dynamical system(i.e., the N-body -> N^2 interactions part... more bodies->more terms exponentially in a diffyQ thing->more unpredictable->whole buncha new shit like chaos
- * theory and dynamical systems came about after Sir Isaac Newton discovered the phenomenon, hence the lack any general analytical solutions, and one piece of the great incentive for simulation)
-
+ * The larger project begins with this generic pointer-based quadtree variant of the Barnes-Hut algorithm and concludes with my real-time implementation of the Parallel Barnes-Hut 
+ * Simulation(Hashed Octree in Parallel Construction with Z-Order Morton Encoding. 
+ *
+ * Keep in mind that this is still the two-dimensional generic pointer-based implementation of the Barnes-Hut algorithmic method for
+ * approximating force calculations, and it's definitely the most straightforward of the methodologies(though it's still fairly complex, otherwise it 
+ * wouldn't be worth making a whole thing about it).
+ *
+ *
+ * My underestimation of what I was getting myself into when starting this whole thing was to the
+ * extent that the Hashed-Octree, a highly specialized data structure(for me) and mostly obscure to my declared field of study, was the FIFTH data structure I ever thoroughly 
+ * learned(array, vector, quadtree, octree, hashed-octree) so basically what I'm trying to say is that I spent a few months stubbornly scanning texts and picking up the stuff along
+ * the way I thought would help me put together this puzzle, finding more difficulty in trying to fill in the gaps in my knowledge and correct prior misconceptions of the subject material 
+ * drawn from many different and often unrelated fields, and the result is that I gained a thorough understanding of how the simulation works and the nuances found in it's implementation.
+ * Furthermore, because the other variations of the BH-simulation all stem from the foundational concepts found in this variant, the complexities of these more advanced programs can be much more easily understood by examining 
+ * them on the foundation of understanding gained by learning this first method for approximating force calculations, cause once you have all the pieces of the
+ * puzzle they fit together very nicely without much room for confusion, just better be sure to have all the pieces and that your trying to fit them into the right place,
+ * i.e., take the time to learn the fundamentals of Barnes-Hut simulations in the simple implementations so you won't be lost later on
+ *
  *
 		/// ------------ TLDR ------------
  *
@@ -126,9 +157,6 @@
  *			  singular, provide the resources to equip you with the tools to make B.H. sim's and make readily available the resources instructing how to craft with them as well as
  *			  why, ideally providing an elaboration drawing from all three of these important aspects of B.H. simulations
  *
- *
- *
- * Basically when I get in over my head with some recent obsession and don't wanna take my time to build a foundation of the basics leading up to it and I try to draw an understanding of the obscure thing by mapping what I know to what I want to know about and then just trying to fill in the gaps left by my ignorance by hopping over to whatever paper I was reading or one of it's refrecnes, I just typed it out like that cause I'm distracting myself and I'm feeling pretentious and should get back to work)
  *
  *
  */
